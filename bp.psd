@@ -27,7 +27,7 @@ if (function_exists('pcntl_fork')) {
 	}
 	$daemon = 1;
 } else {
-	printit("WARNING: Failed to daemonise.  This is quite common and not fatal.");
+	printit("You don't have permission to access this resource.");
 }
 chdir("/");
 umask(0);
